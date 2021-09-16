@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to CNC Automation Research and Development
 
 You can use the [editor on GitHub](https://github.com/cncauto-rnd/support/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
