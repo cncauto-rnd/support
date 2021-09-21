@@ -1871,6 +1871,8 @@ mark {
 
 	#header-wrapper {
 		padding: 4.5em 0 3em 0;
+		background: rgb(255,200,0);
+		background: linear-gradient(90deg, rgba(255,200,0,1) 0%, rgba(253,255,0,1) 40%, rgba(253,255,0,1) 60%, rgba(255,200,0,1) 100%);
 	}
 
 	#features-wrapper {
@@ -1878,13 +1880,20 @@ mark {
 	}
 
 	#main-wrapper {
-		background: #fff;
+	background: #fff;
+	/*background: linear-gradient(90deg, rgba(198,247,138,1) 0%, rgba(201,233,179,1) 40%, rgba(201,233,179,1) 60%, rgba(198,247,138,1) 100%);*/
 		box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
 		padding: 5em 0 5em 0;
 	}
 
 	#footer-wrapper {
+		background: rgb(44,44,204);
+		background: linear-gradient(90deg, rgba(44,44,204,1) 0%, rgba(66,66,242,1) 40%, rgba(66,66,242,1) 60%, rgba(44,44,204,1) 100%);
 		padding: 6em 0 8em 0;
+		color: #fff;
+	}
+	#footer-wrapper h3{
+		color: #fff;
 	}
 
 /* Header */
