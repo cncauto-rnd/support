@@ -24,7 +24,7 @@
 
 						<!-- Logo -->
 							<div id="logo">
-								<h1><a href="index.html"><img src="https://raw.githubusercontent.com/cncauto-rnd/support/8da619334a71ad27ae4d9f85e9fb366ad475338a/images/Foldsafe.png"></a></h1>
+								<h1><a href="index.html"><img src="images/foldsafe.png"></a></h1>
 								<span>by </span><a href="https://cncauto.com.au/">CNC Automation</a>
 							</div>
 
@@ -70,7 +70,10 @@
 											<h3>FoldSafe V7 Configuration</h3>
 											<p>This configurator helps the user to calculate the calibration factor as well as the IO bitmask to set the input output configuration.</p>
 											<footer>
-												<a href="https://cncauto.com.au/aboutus.html" target="_blank" class="button icon solid fa-info-circle">Contact support</a>
+												<div class="d-grid gap-2">
+													<button class="btn btn-success btn-lg" id="CalFactorAlertBtn" type="button">Download Manual</button>
+													<button class="btn btn-primary btn-lg" id="CalFactorAlertBtn" type="button">Contact Support</button>
+												</div>
 											</footer>
 										</section>
 
@@ -101,20 +104,20 @@
 												<h6>Before moving the beam</h6>
 													<label for="basic-url" class="form-label">Encoder Reading</label>
 													<div class="input-group mb-3">
-													 <input type="text" class="form-control" id="Encoder1" placeholder="123456">
+													 <input type="text" class="form-control" id="Encoder1" placeholder="">
 													</div>
 													<label for="basic-url" class="form-label">Beam Hight (mm)</label>
 													<div class="input-group mb-3">
-													 <input type="text" class="form-control" id="Beam1" placeholder="15.0">
+													 <input type="text" class="form-control" id="Beam1" placeholder="">
 													</div>
 												<h6>After moving the beam</h6>
 													<label for="basic-url" class="form-label">Encoder Reading</label>
 													<div class="input-group mb-3">
-													 <input type="text" class="form-control" id="Encoder2" placeholder="654321">
+													 <input type="text" class="form-control" id="Encoder2" placeholder="">
 													</div>
 													<label for="basic-url" class="form-label">Beam Hight (mm)</label>
 													<div class="input-group mb-3">
-													 <input type="text" class="form-control" id="Beam2" placeholder="20.0">
+													 <input type="text" class="form-control" id="Beam2" placeholder="">
 													</div>
 									
 
