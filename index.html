@@ -71,8 +71,8 @@
 											<p>This configurator helps the user to calculate the calibration factor as well as the IO bitmask to set the input output configuration.</p>
 											<footer>
 												<div class="d-grid gap-2">
-													<button class="btn btn-success btn-lg" id="CalFactorAlertBtn" type="button">Download Manual</button>
-													<button class="btn btn-primary btn-lg" id="CalFactorAlertBtn" type="button">Contact Support</button>
+													<button class="btn btn-success btn-lg" type="button" onclick="window.open('https://cncauto.com.au/', '_blank');">Download Manual</button>
+													<button class="btn btn-primary btn-lg" type="button" onclick="window.open('https://cncauto.com.au/', '_blank');" >Contact Support</button>
 												</div>
 											</footer>
 										</section>
@@ -104,26 +104,26 @@
 												<h6>Before moving the beam</h6>
 													<label for="basic-url" class="form-label">Encoder Reading</label>
 													<div class="input-group mb-3">
-													 <input type="number" class="form-control" id="Encoder1" placeholder="">
+													 <input type="text" class="form-control" id="Encoder1" placeholder="">
 													</div>
 													<label for="basic-url" class="form-label">Beam Hight (mm)</label>
 													<div class="input-group mb-3">
-													 <input type="number" class="form-control" id="Beam1" placeholder="">
+													 <input type="text" class="form-control" id="Beam1" placeholder="">
 													</div>
 												<h6>After moving the beam</h6>
 													<label for="basic-url" class="form-label">Encoder Reading</label>
 													<div class="input-group mb-3">
-													 <input type="number" class="form-control" id="Encoder2" placeholder="">
+													 <input type="text" class="form-control" id="Encoder2" placeholder="">
 													</div>
 													<label for="basic-url" class="form-label">Beam Hight (mm)</label>
 													<div class="input-group mb-3">
-													 <input type="number" class="form-control" id="Beam2" placeholder="">
+													 <input type="text" class="form-control" id="Beam2" placeholder="">
 													</div>
 									
 
 												<div id="CalFactorAlertPlaceholder"></div>
 												<div class="d-grid gap-2">
-													<button class="btn btn-primary btn-lg" id="CalFactorAlertBtn" type="button">Calculate Calibration Factor</button>
+													<button class="btn btn-primary btn-lg" onclick="CalFacFunction()" type="button">Calculate Calibration Factor</button>
 												</div>
 
 											</div>
@@ -132,7 +132,27 @@
 
 											<h2>Input Mask Calculator</h2>
 
-											
+											<p>This widget helps to properly setup inputs of FoldSafe controller</p>
+											<div class="container-fluid">
+												<h6>Current input mask</h6>
+												<div class="input-group mb-3">
+													<input type="text" class="form-control" id="InMask" placeholder="">
+												</div>
+												<h6>Input State</h6>
+												<div class="btn-group btn-group-toggle" data-toggle="buttons">
+													<label class="btn btn-secondary active">
+												    <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+												  </label>
+												  <label class="btn btn-secondary">
+												    <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+												  </label>
+												</div>
+												<div id="InputMaskAlertPlaceholder"></div>
+												<div class="d-grid gap-2">
+													<button class="btn btn-primary btn-lg" onclick="CalFacFunction()" type="button">Calculate Input Mask</button>
+												</div>
+
+											</div>
 
 										</article>
 										<article>
@@ -247,21 +267,17 @@
 				var alertTrigger = document.getElementById('CalFactorAlertBtn')
 
 				
-				function alert(message, type) {
+				function CalFacFunction() {
 				  var wrapper = document.createElement('div')
-				  var Encoder1 = document.getElementById("Encoder1").value
-				  var Encoder2 = document.getElementById("Encoder2").value
-				  var Beam1 = document.getElementById("Beam1").value
-				  var Beam2 = document.getElementById("Beam2").value
-				  wrapper.innerHTML = '<div class="alert alert-' + type + '" role="alert">Your Calibration factor is ' + ((Encoder2-Encoder1)/(Beam2-Beam1)) + '</div>'
+				  var Encoder1 = numeral(document.getElementById("Encoder1").value)
+				  var Encoder2 = numeral(document.getElementById("Encoder2").value)
+				  var Beam1 = numeral(document.getElementById("Beam1").value)
+				  var Beam2 = numeral(document.getElementById("Beam2").value)
+				  var type = "success"
+				  var result = numeral((Encoder2.difference(Encoder1.value()))/(Beam2.difference(Beam1.value())))
+				  wrapper.innerHTML = '<div class="alert alert-' + type + ' strong" role="alert">Your Calibration factor is ' + result.format('0.00') + '</div>'
 				  alertPlaceholder.innerHTML = ""
 				  alertPlaceholder.append(wrapper)
-				}
-
-				if (alertTrigger) {
-				  alertTrigger.addEventListener('click', function () {
-				    alert('Nice, you triggered this alert message!', 'success')
-				  })
 				}
 			</script>
 
