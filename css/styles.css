@@ -11549,6 +11549,10 @@ html {
   padding-bottom: 5px;
 }
 
+.labelCNC{
+  padding-right: 0.5rem;
+}
+
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;

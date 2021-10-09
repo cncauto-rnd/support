@@ -67,172 +67,250 @@
                 <div class="divider-custom-icon"><i class="fas fa-cogs"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
-            <!-- Portfolio Grid Items-->
+            <!-- Grid Items-->
             <div class="row justify-content-center borderCNC">
                 <div class="col separatorCNC">
                     <div class="container-fluid">
                         <h2 class="textCNC">Calibration Factor Calculator</h2>
-                       <div class="ms-auto"><p class="lead text-justify textCNC">This widget takes four inputs and calculates the calibration factor for the FoldSafe controller.</p>
-                       </div>
-                       <div class="ms-auto"><p class="lead text-justify textCNC"><strong>Before moving the beam</strong> enter the encoder count shown in FoldSafe Diagnostic page. Then enter the initial beam height by measuring the distance between tip of the tool and the top of the die using a measuring device.
+                        <div class="ms-auto"><p class="lead text-justify textCNC">This widget takes four inputs and calculates the calibration factor for the FoldSafe controller.</p>
+                        </div>
+                        <div class="ms-auto"><p class="lead text-justify textCNC"><strong>Before moving the beam</strong> enter the encoder count shown in FoldSafe Diagnostic page. Then enter the initial beam height by measuring the distance between tip of the tool and the top of the die using a measuring device.
                         </div>
                         <div class="ms-auto"><p class="lead text-justify textCNC">Repeat the procedure again after moving the beam arbitrary amount and enter the readings on <strong>After moving the beam</strong> section.
                         </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="container-fluid">
-                    <h6>Before moving the beam</h6>
-                    <label for="basic-url" class="form-label">Encoder Reading</label>
-                    <div class="input-group mb-3">
-                       <input type="text" class="form-control" id="Encoder1" placeholder="">
-                   </div>
-                   <label for="basic-url" class="form-label">Beam Hight (mm)</label>
-                   <div class="input-group mb-3">
-                       <input type="text" class="form-control" id="Beam1" placeholder="">
-                   </div>
-                   <br>
-                   <h6>After moving the beam</h6>
-                   <label for="basic-url" class="form-label">Encoder Reading</label>
-                   <div class="input-group mb-3">
-                       <input type="text" class="form-control" id="Encoder2" placeholder="">
-                   </div>
-                   <label for="basic-url" class="form-label">Beam Hight (mm)</label>
-                   <div class="input-group mb-3">
-                       <input type="text" class="form-control" id="Beam2" placeholder="">
-                   </div>
-                   <div id="CalFactorAlertPlaceholder"></div>
-                   <div class="d-grid gap-2">
-                    <button class="btn btn-primary btn-lg" onclick="CalFacFunction()" type="button">Calculate Calibration Factor</button>
-                </div>
+                <div class="col">
+                    <div class="container-fluid">
+                        <h6>Before moving the beam</h6>
+                        <label for="basic-url" class="form-label">Encoder Reading</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="Encoder1" placeholder="">
+                        </div>
+                        <label for="basic-url" class="form-label">Beam Hight (mm)</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="Beam1" placeholder="">
+                        </div>
+                        <br>
+                        <h6>After moving the beam</h6>
+                        <label for="basic-url" class="form-label">Encoder Reading</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="Encoder2" placeholder="">
+                        </div>
+                        <label for="basic-url" class="form-label">Beam Hight (mm)</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="Beam2" placeholder="">
+                        </div>
+                        <div id="CalFactorAlertPlaceholder"></div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-lg" onclick="CalFacFunction()" type="button">Calculate Calibration Factor</button>
+                        </div>
 
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <br>
-    <hr>
-    <br>
-                <div class="row justify-content-center borderCNC">
+            <br>
+            <!-- Grid Items-->
+            <div class="row justify-content-center borderCNC">
                 <div class="col separatorCNC">
                     <div class="container-fluid">
                         <h2 class="textCNC">Input Mask Calculator</h2>
-                       <div class="ms-auto"><p class="lead text-justify textCNC">This widget helps to properly setup inputs of FoldSafe controller.</p>
-                       </div>
-                       <div class="ms-auto"><p class="lead text-justify textCNC"><strong>Before moving the beam</strong> enter the encoder count shown in FoldSafe Diagnostic page. Then enter the initial beam height by measuring the distance between tip of the tool and the top of the die using a measuring device.
+                        <div class="ms-auto"><p class="lead text-justify textCNC">This widget helps to properly setup inputs of FoldSafe controller.</p>
+                        </div>
+                        <div class="ms-auto"><p class="lead text-justify textCNC"><strong>Before moving the beam</strong> enter the encoder count shown in FoldSafe Diagnostic page. Then enter the initial beam height by measuring the distance between tip of the tool and the top of the die using a measuring device.
                         </div>
                         <div class="ms-auto"><p class="lead text-justify textCNC">Repeat the procedure again after moving the beam arbitrary amount and enter the readings on <strong>After moving the beam</strong> section.
                         </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="container-fluid">
+                        <h6>Current input mask</h6>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="InMask" placeholder="">
+                        </div>
+                        <h6>Input State</h6>
+                        <div class="row">
+                            <div class="col col-4">
+                                <label for="estop11" class="col-form-label">Emergency Stop 1 :</label>
+                            </div>
+                            <div class="col">
+                                <div class="btn-group buttonGroupCNC" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="estop1" id="estop11" autocomplete="off" checked>
+                                    <label class="btn btn-outline-success" for="estop11">Active</label>
+
+                                    <input type="radio" class="btn-check" name="estop1" id="estop12" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="estop12">Inactive</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-4">
+                                <label for="estop21" class="col-form-label">Emergency Stop 2 :</label>
+                            </div>
+                            <div class="col">
+                                <div class="btn-group buttonGroupCNC" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="estop2" id="estop21" autocomplete="off" checked>
+                                    <label class="btn btn-outline-success" for="estop21">Active</label>
+
+                                    <input type="radio" class="btn-check" name="estop2" id="estop22" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="estop22">Inactive</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-4">
+                                <label for="footsw1" class="col-form-label">Foot Switch :</label>
+                            </div>
+                            <div class="col">
+                                <div class="btn-group buttonGroupCNC" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="footsw" id="footsw1" autocomplete="off" checked>
+                                    <label class="btn btn-outline-success" for="footsw1">Active</label>
+
+                                    <input type="radio" class="btn-check" name="footsw" id="footsw2" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="footsw2">Inactive</label>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-4">
+                                <label for="mute1" class="col-form-label">Slow :</label>
+                            </div>
+                            <div class="col">
+                                <div class="btn-group buttonGroupCNC" role="group" aria-label="Basic radio toggle button group float-right">
+                                    <input type="radio" class="btn-check" name="mute" id="mute1" autocomplete="off" checked>
+                                    <label class="btn btn-outline-success" for="mute1">Active</label>
+
+                                    <input type="radio" class="btn-check" name="mute" id="mute2" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="mute2">Inactive</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-4">
+                                <label for="curtain11" class="col-form-label">Curtain 1 :</label>
+                            </div>
+                            <div class="col">
+                                <div class="btn-group buttonGroupCNC" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="curtain1" id="curtain11" autocomplete="off" checked>
+                                    <label class="btn btn-outline-success" for="curtain11">Active</label>
+
+                                    <input type="radio" class="btn-check" name="curtain1" id="curtain12" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="curtain12">Inactive</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row buttonGroupCNC">
+                            <div class="col col-4">
+                                <label for="curtain21" class="col-form-label">Curtain 2 :</label>
+                            </div>
+                            <div class="col">
+                                <div class="btn-group buttonGroupCNC" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="curtain2" id="curtain21" autocomplete="off" checked>
+                                    <label class="btn btn-outline-success" for="curtain21">Active</label>
+
+                                    <input type="radio" class="btn-check" name="curtain2" id="curtain22" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="curtain22">Inactive</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="InputMaskAlertPlaceholder"></div>
+                        <div class="d-grid gap-1 ">
+                            <button class="btn btn-primary btn-lg" onclick="CalFacFunction()" type="button">Calculate Input Mask</button>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="container-fluid">
-                                                <h6>Current input mask</h6>
-                                                <div class="input-group mb-3">
-                                                    <input type="text" class="form-control" id="InMask" placeholder="">
-                                                </div>
-                                                <h6>Input State</h6>
-                                                <div class="ms-auto buttonGroupCNC">
-                                                Emergency Stop 1 :  
-                                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                                      <input type="radio" class="btn-check" name="estop1" id="estop11" autocomplete="off" checked>
-                                                      <label class="btn btn-outline-success" for="estop11">Active</label>
+            <!-- Grid Items-->
+            <div class="row justify-content-center borderCNC">
+                <div class="col separatorCNC">
+                    <div class="container-fluid">
+                        <h2 class="textCNC">Output Mask Calculator</h2>
+                        <div class="ms-auto"><p class="lead text-justify textCNC">This widget helps to properly setup outputs of FoldSafe controller.</p>
+                        </div>
+                        <div class="ms-auto"><p class="lead text-justify textCNC"><strong>Before moving the beam</strong> enter the encoder count shown in FoldSafe Diagnostic page. Then enter the initial beam height by measuring the distance between tip of the tool and the top of the die using a measuring device.
+                        </div>
+                        <div class="ms-auto"><p class="lead text-justify textCNC">Repeat the procedure again after moving the beam arbitrary amount and enter the readings on <strong>After moving the beam</strong> section.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="container-fluid">
+                        <h6>Current output mask</h6>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="InMask" placeholder="">
+                        </div>
+                        <h6>Output State</h6>
+                        <div class="row">
+                            <div class="col col-4">
+                                <label for="estop11" class="col-form-label">Primary Stop :</label>
+                            </div>
+                            <div class="col">
+                                <div class="btn-group buttonGroupCNC" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="pstop" id="pstop1" autocomplete="off" checked>
+                                    <label class="btn btn-outline-success" for="pstop1">Normally Open</label>
 
-                                                      <input type="radio" class="btn-check" name="estop1" id="estop12" autocomplete="off">
-                                                      <label class="btn btn-outline-danger" for="estop12">Inactive</label>
-                                                    </div>
-                                                </div>
-                                                <div class="ms-auto buttonGroupCNC">
-                                                Emergency Stop 2 :  
-                                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                                      <input type="radio" class="btn-check" name="estop2" id="estop21" autocomplete="off" checked>
-                                                      <label class="btn btn-outline-success" for="estop21">Active</label>
+                                    <input type="radio" class="btn-check" name="pstop" id="pstop2" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="pstop2">Normally Closed</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row buttonGroupCNC">
+                            <div class="col col-4">
+                                <label for="estop21" class="col-form-label">Secondary Stop :</label>
+                            </div>
+                            <div class="col">
+                                <div class="btn-group buttonGroupCNC" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="sstop" id="sstop1" autocomplete="off" checked>
+                                    <label class="btn btn-outline-success" for="sstop1">Normally Open</label>
 
-                                                      <input type="radio" class="btn-check" name="estop2" id="estop22" autocomplete="off">
-                                                      <label class="btn btn-outline-danger" for="estop22">Inactive</label>
-                                                    </div>
-                                                </div>
-                                                <div class="ms-auto buttonGroupCNC">
-                                                Curtain 1 :  
-                                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                                      <input type="radio" class="btn-check" name="curtain1" id="curtain11" autocomplete="off" checked>
-                                                      <label class="btn btn-outline-success" for="curtain11">Active</label>
+                                    <input type="radio" class="btn-check" name="sstop" id="sstop2" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="sstop2">Normally Closed</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="OutputMaskAlertPlaceholder"></div>
+                        <div class="d-grid gap-1 ">
+                            <button class="btn btn-primary btn-lg" onclick="CalFacFunction()" type="button">Calculate Output Mask</button>
+                        </div>
 
-                                                      <input type="radio" class="btn-check" name="curtain1" id="curtain12" autocomplete="off">
-                                                      <label class="btn btn-outline-danger" for="curtain12">Inactive</label>
-                                                    </div>
-                                                </div>
-                                                <div class="ms-auto buttonGroupCNC">
-                                                Curtain 2 :  
-                                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                                      <input type="radio" class="btn-check" name="curtain2" id="curtain21" autocomplete="off" checked>
-                                                      <label class="btn btn-outline-success" for="curtain21">Active</label>
-
-                                                      <input type="radio" class="btn-check" name="curtain2" id="curtain22" autocomplete="off">
-                                                      <label class="btn btn-outline-danger" for="curtain22">Inactive</label>
-                                                    </div>
-                                                </div>
-                                                <div class="ms-auto buttonGroupCNC">
-                                                Foot Switch :  
-                                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                                      <input type="radio" class="btn-check" name="footsw" id="footsw1" autocomplete="off" checked>
-                                                      <label class="btn btn-outline-success" for="footsw1">Active</label>
-
-                                                      <input type="radio" class="btn-check" name="footsw" id="footsw2" autocomplete="off">
-                                                      <label class="btn btn-outline-danger" for="footsw2">Inactive</label>
-                                                    </div>
-                                                </div>
-                                                <div class="ms-auto buttonGroupCNC">
-                                                Mute :  
-                                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                                      <input type="radio" class="btn-check" name="mute" id="mute1 autocomplete="off" checked>
-                                                      <label class="btn btn-outline-success" for="mute1">Active</label>
-
-                                                      <input type="radio" class="btn-check" name="mute" id="mute2" autocomplete="off">
-                                                      <label class="btn btn-outline-danger" for="mute2">Inactive</label>
-                                                    </div>
-                                                </div>
-
-                                                <div id="InputMaskAlertPlaceholder"></div>
-                                                <div class="d-grid gap-2">
-                                                    <button class="btn btn-primary" onclick="CalFacFunction()" type="button">Calculate Input Mask</button>
-                                                </div>
-
-                                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section-->
+    <section class="page-section bg-background text-dark mb-0" id="download">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-blueFS">Setup Guide</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-question-circle"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="row">
+                <div class="ms-auto"><p class="lead text-justify text-center">This configurator helps the user to calculate the calibration factor as well as the IO bitmask to set the input output configuration.</p></div>
+                <div class="ms-auto"><p class="lead text-justify text-center">You can download a PDF containing all the information about how to use this configurator by clicking the following link.</p></div>
+            </div>
+        </div>
+        <!-- About Section Button-->
+        <div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-dark" href="https://startbootstrap.com/theme/freelancer/">
+                <i class="fas fa-download me-2"></i>
+                Download Manual
+            </a>
         </div>
     </div>
-</div>
-</section>
-<!-- About Section-->
-<section class="page-section bg-background text-dark mb-0" id="download">
-    <div class="container">
-        <!-- About Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-blueFS">Setup Guide</h2>
-        <!-- Icon Divider-->
-        <div class="divider-custom divider-light">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon"><i class="fas fa-question-circle"></i></div>
-            <div class="divider-custom-line"></div>
-        </div>
-        <!-- About Section Content-->
-        <div class="row">
-            <div class="ms-auto"><p class="lead text-justify text-center">This configurator helps the user to calculate the calibration factor as well as the IO bitmask to set the input output configuration.</p></div>
-            <div class="ms-auto"><p class="lead text-justify text-center">You can download a PDF containing all the information about how to use this configurator by clicking the following link.</p></div>
-        </div>
-    </div>
-    <!-- About Section Button-->
-    <div class="text-center mt-4">
-        <a class="btn btn-xl btn-outline-dark" href="https://startbootstrap.com/theme/freelancer/">
-            <i class="fas fa-download me-2"></i>
-            Download Manual
-        </a>
-    </div>
-</div>
 </section>
 <!-- Footer-->
 <footer class="footer text-center" id="contact">
     <div class="container">
         <div class="row">
-             <!-- Footer About Text-->
+            <!-- Footer About Text-->
             <div class="col-lg-4">
                 <h4 class="text-uppercase mb-4">About FoldSafe</h4>
                 <p class="lead mb-0">
@@ -259,7 +337,7 @@
                 </p>
             </div>
 
-           
+
         </div>
     </div>
 </footer>
@@ -277,6 +355,6 @@
     console.log(
         "*************************************************\n          Designed by NS @z4nadeesh\n*************************************************"
         );
-</script>
+    </script>
 </body>
 </html>
