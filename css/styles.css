@@ -206,7 +206,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 small, .small {
@@ -4048,7 +4048,8 @@ textarea.form-control-lg {
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
-  text-decoration: underline 4px;
+  font-family: 'Andada Pro', serif;
+  text-decoration: underline 2px;
   white-space: nowrap;
 }
 .navbar-nav {
@@ -11509,6 +11510,7 @@ html {
     display: none;
     max-width: 15%;
     padding-right: 5px;
+    padding-bottom: 5px;
 }
 
 @media (min-width: 992px) {
@@ -11541,6 +11543,10 @@ html {
   .separatorCNC{
     border-right: 1px solid #2c3e50;
   }
+}
+
+.buttonGroupCNC{
+  padding-bottom: 5px;
 }
 
 .footer {

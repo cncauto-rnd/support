@@ -52,3 +52,20 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+var alertPlaceholder = document.getElementById('CalFactorAlertPlaceholder')
+var alertTrigger = document.getElementById('CalFactorAlertBtn')
+
+
+function CalFacFunction() {
+  var wrapper = document.createElement('div')
+  var Encoder1 = numeral(document.getElementById("Encoder1").value)
+  var Encoder2 = numeral(document.getElementById("Encoder2").value)
+  var Beam1 = numeral(document.getElementById("Beam1").value)
+  var Beam2 = numeral(document.getElementById("Beam2").value)
+  var type = "success"
+  var result = numeral((Encoder2.difference(Encoder1.value()))/(Beam2.difference(Beam1.value())))
+  wrapper.innerHTML = '<div class="alert alert-' + type + ' strong" role="alert">Your Calibration factor is ' + result.format('0.00') + '</div>'
+  alertPlaceholder.innerHTML = ""
+  alertPlaceholder.append(wrapper)
+}
