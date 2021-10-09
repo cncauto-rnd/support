@@ -11505,10 +11505,6 @@ html {
     line-height: 2.5rem;
   }
 }
-
-
-
-
 .logoCNC {
     display: none;
     max-width: 15%;
@@ -11518,6 +11514,32 @@ html {
 @media (min-width: 992px) {
   .logoCNC {
     display: inline;
+  }
+}
+
+.textCNC {
+    text-align: center;
+}
+
+@media (min-width: 421px) {
+  .textCNC {
+    text-align: right !important;
+  }
+}
+
+.borderCNC{
+    padding-block: 26px;
+    border: 1px solid #2c3e50;
+    border-radius: 20px;
+  }
+
+.separatorCNC{
+    border-right: none;
+  }
+
+@media (min-width: 421px){
+  .separatorCNC{
+    border-right: 1px solid #2c3e50;
   }
 }
 
