@@ -4048,7 +4048,7 @@ textarea.form-control-lg {
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
-  text-decoration: none;
+  text-decoration: underline 4px;
   white-space: nowrap;
 }
 .navbar-nav {
@@ -11503,6 +11503,21 @@ html {
   .portfolio-modal .portfolio-modal-title {
     font-size: 3rem;
     line-height: 2.5rem;
+  }
+}
+
+
+
+
+.logoCNC {
+    display: none;
+    max-width: 15%;
+    padding-right: 5px;
+}
+
+@media (min-width: 992px) {
+  .logoCNC {
+    display: inline;
   }
 }
 
